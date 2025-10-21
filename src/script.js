@@ -1,23 +1,39 @@
+import * as THREE from 'three';
+
+const canvas = document.querySelector('canvas.webgl')
+
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
+
 // Basic Three.js scene
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-    75, 
-    window.innerWidth / window.innerHeight, 
-    0.1, 
-    1000
-);
-
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('three-container').appendChild(renderer.domElement);
 
 // Add a rotating cube
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshNormalMaterial();
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({ 
+    color: 0xff0000,
+    wireframe: true
+});
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
-camera.position.z = 5;
+// Camera
+const camera = new THREE.PerspectiveCamera(
+    75, 
+    sizes.width / sizes.height, 
+    0.1, 
+    100
+);
+camera.position.z = 3;
+scene.add(camera);
+
+const renderer = new THREE.WebGLRenderer({
+    canvas: canvas
+});
+renderer.setSize(sizes.width, sizes.height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 function animate() {
     requestAnimationFrame(animate);
@@ -29,8 +45,17 @@ function animate() {
 animate();
 
 // Handle window resize
-window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-});
+window.addEventListener('resize', () =>
+{
+    // Update sizes
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    // Update camera
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    // Update renderer
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
