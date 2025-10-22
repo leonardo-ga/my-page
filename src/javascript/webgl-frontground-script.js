@@ -12,8 +12,8 @@ const scene = new THREE.Scene();
 // Cube
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshStandardMaterial({ 
-    color: 0xff0000,
-    wireframe: true
+    color: 0x1A2CFF,
+    wireframe: false
 });
 const cube = new THREE.Mesh(geometry, material);
 cube.position.x = -1;
