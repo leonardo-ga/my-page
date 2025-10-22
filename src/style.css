@@ -20,6 +20,85 @@ header, section {
     margin: 0 auto;
 }
 
-section {
-    min-height: 100vh;
+
+/*
+Timeline style
+*/
+.timeline {
+  padding: 100px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0; /* start hidden */
+  background: #ff0000;
+  transition: height 0.5s ease-out;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  opacity: 0; /* hidden initially */
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.timeline-item[data-type="experience"] .timeline-icon {
+  background: #ff6b6b;
+}
+.timeline-item[data-type="education"] .timeline-icon {
+  background: #6bc1ff;
+}
+.timeline-item[data-type="publication"] .timeline-icon {
+  background: #6bff95;
+}
+
+.timeline-content {
+  padding-left: 30px;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.timeline-content span {
+  display: block;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #ccc;
+  margin: 0;
 }
