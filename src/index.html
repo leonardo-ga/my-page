@@ -12,73 +12,103 @@
         <p>Mathematician & Developer / [Your Description]</p>
     </header>
 
-    <canvas class="webgl"></canvas>
+    <canvas class="webgl-background"></canvas>
+    <canvas class="webgl-frontground"></canvas>
 
-    <section class="timeline">
+    <section class="timeline" data-type="experience">
         <h2>Experience</h2>
 
         <div class="timeline-container">
             <div class="timeline-progress"></div>
 
-            <div class="timeline-item" data-type="experience">
-                <div class="timeline-icon"></div>
+            <div class="timeline-item">
+                <div class="timeline-icon">May 2022 - Sept 2024</div>
                 <div class="timeline-content">
-                    <h3>Software Developer</h3>
-                    <span>Company ABC — 2022–2024</span>
-                    <p>Worked on web apps, data visualization, and interactive 3D interfaces.</p>
+                    <h3>Java Full-Stack Developer</h3>
+                    <span>Accenture, Milano</span>
+                    <p>Developed banking web applications for Accenture clients, focusing on robo-advisory and digital investment platforms.</p>
                 </div>
             </div>
-
-            <div class="timeline-item" data-type="education">
-                <div class="timeline-icon"></div>
+            <div class="timeline-item">
+                <div class="timeline-icon">2018 - 2022</div>
                 <div class="timeline-content">
-                    <h3>MSc in Mathematics</h3>
-                    <span>University XYZ — 2020–2022</span>
-                    <p>Focus on applied mathematics and algorithmic modeling.</p>
+                    <h3>Private Tutor</h3>
+                    <span>Freelancer</span>
+                    <p>Provided tutoring in Mathematics, Physics and English, deeloping strong pedagogical and explanatory skills.</p>
                 </div>
             </div>
-
-            <div class="timeline-item" data-type="publication">
-                <div class="timeline-icon"></div>
+            <div class="timeline-item">
+                <div class="timeline-icon">August 2017</div>
                 <div class="timeline-content">
-                    <h3>Deep Learning Optimization</h3>
-                    <span>Journal ABC — 2021</span>
-                    <p>Published a paper exploring efficient backpropagation methods.</p>
+                    <h3>Archive Intern</h3>
+                    <span>Generali, Lodi</span>
+                    <p>Reorganized and analyzed document archives at an insurance company.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">August 2016</div>
+                <div class="timeline-content">
+                    <h3>Private Tutor</h3>
+                    <span>CERN, Geneva</span>
+                    <p>Constructed experimental chambers for cosmic particle detection. Attended physics lectures and gained practical laboratory experience.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="timeline">
+    <section class="timeline" data-type="education">
         <h2>Education</h2>
 
         <div class="timeline-container">
             <div class="timeline-progress"></div>
 
-            <div class="timeline-item" data-type="experience">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content">
-                    <h3>Software Developer</h3>
-                    <span>Company ABC — 2022–2024</span>
-                    <p>Worked on web apps, data visualization, and interactive 3D interfaces.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item" data-type="education">
-                <div class="timeline-icon"></div>
+            <div class="timeline-item">
+                <div class="timeline-icon">Sept 2022 - April 2025</div>
                 <div class="timeline-content">
                     <h3>MSc in Mathematics</h3>
-                    <span>University XYZ — 2020–2022</span>
-                    <p>Focus on applied mathematics and algorithmic modeling.</p>
+                    <span>Università degli Studi di Milano</span>
+                    <p>Thesis: <i>Nonstandard methods for ultrafilter relation extensions</i></p>
+                    <p>Advisor: Lorenzo Luperi Baglini</p>
+                    <p>Final grade: 110/110 cum Laude</p>
                 </div>
             </div>
-
-            <div class="timeline-item" data-type="publication">
-                <div class="timeline-icon"></div>
+            <div class="timeline-item">
+                <div class="timeline-icon">Sept 2018 - April 2022</div>
                 <div class="timeline-content">
-                    <h3>Deep Learning Optimization</h3>
-                    <span>Journal ABC — 2021</span>
-                    <p>Published a paper exploring efficient backpropagation methods.</p>
+                    <h3>BSc in Mathematics</h3>
+                    <span>Università degli Studi di Milano</span>
+                    <p>Final grade: 108/110</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">Sept 2013 - April 2018</div>
+                <div class="timeline-content">
+                    <h3>Italian Secondary Diploma</h3>
+                    <span>Liceo Scientifico Gandini</span>
+                    <p>Year Abroad: Gainesville High School, USA, 2015 - 2016</p>
+                    <p>Final grade: 100/100</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline" data-type="publication">
+        <h2>Publications and Research</h2>
+
+        <div class="timeline-container">
+            <div class="timeline-progress"></div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">2025</div>
+                <div class="timeline-content">
+                    <p><i>Nonstandard methods for ultrafilter relation extensions</i>, with L. Luperi Baglini</p>
+                    <p>Preprint, available at <a href="https://arxiv.org/abs/2506.04692">arXiv:2506.04692</a></p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">2025</div>
+                <div class="timeline-content">
+                    <p>Participant, AILA Logic Summer School</p>
                 </div>
             </div>
         </div>
@@ -98,7 +128,8 @@
         </ul>
     </section>
 
-    <script type="module" src="./script.js"></script>
-    <script type="module" src="./timeline_script.js"></script>
+    <script type="module" src="./javascript/webgl-background-script.js"></script>
+    <script type="module" src="./javascript/webgl-frontground-script.js"></script>
+    <script type="module" src="./javascript/timeline_script.js"></script>
 </body>
 </html>

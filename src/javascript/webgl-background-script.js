@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 // Canvas
-const canvas = document.querySelector('canvas.webgl')
+const canvas = document.querySelector('canvas.webgl-background')
 
 // Sizes
 const sizes = { width: window.innerWidth, height: window.innerHeight };
@@ -13,9 +13,10 @@ const scene = new THREE.Scene();
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshStandardMaterial({ 
     color: 0xff0000,
-    wireframe: true
+    wireframe: false
 });
 const cube = new THREE.Mesh(geometry, material);
+cube.position.x = 1;
 cube.position.z = -5; // start a bit behind the camera
 scene.add(cube);
 

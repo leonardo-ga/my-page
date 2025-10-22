@@ -38,7 +38,7 @@ progressLines.forEach((progressLine) => {
         end: "bottom 85%",
         onEnter: () => gsap.to(progressLine, { height: lineHeight, duration: 0.3 }),
         onLeaveBack: () => gsap.to(progressLine, { height: prevHeight, duration: 0.3 }),
-        markers: true
+        //markers: true
       });
     }
   });
