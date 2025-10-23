@@ -21,7 +21,7 @@ canvas.webgl-frontground {
     z-index: 1; /* infront all content */
     width: 100%;
     height: 100%;
-    pointer-events: none;/* to make link underneath clickable! */
+    pointer-events: none; /* to make link underneath clickable! */
 }
 
 header, section {
